@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import OrderForm from "./OrderForm";
 
 const waLink =
@@ -97,15 +98,20 @@ export default function Home() {
           <strong>3Dridens</strong>
         </a>
         <div className="nav-links">
-          <a href="/sistem">Sistem</a>
-          <a href="#hasil">Hasil</a>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/testimoni">Testimoni</Link>
           <a href="#panduan">Panduan</a>
           <a href="#proses">Proses</a>
           <a href="#order">Order</a>
         </div>
-        <a className="nav-cta" href={waLink} target="_blank">
-          WhatsApp
-        </a>
+        <div className="nav-actions">
+          <Link className="ghost-button" href="/login">
+            Masuk
+          </Link>
+          <a className="nav-cta" href={waLink} target="_blank">
+            WhatsApp
+          </a>
+        </div>
       </nav>
 
       <section className="hero" id="top">
@@ -118,11 +124,11 @@ export default function Home() {
             produksi, finishing, quality check, sampai pengiriman.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="/sistem">
-              Buka Sistem Order <ArrowIcon />
-            </a>
+            <Link className="primary-button" href="/consultation/new">
+              Ajukan Konsultasi <ArrowIcon />
+            </Link>
             <a className="secondary-button" href="#order">
-              Konsultasi Dulu
+              Konsultasi via WhatsApp
             </a>
           </div>
           <div className="stats">
